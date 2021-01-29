@@ -57,7 +57,7 @@ const moviesStore = {
         const movies = normalizeResponse(response);
         commit(MOVIES, movies);
       } catch (error) {
-        console.log(error);
+        console.log(`From catch block error: ${error}`);
       } finally {
         dispatch('toggleLoader', false, {
           root: true
