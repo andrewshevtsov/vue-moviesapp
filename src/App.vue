@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Loader />
+    <Notification />
     <PosterBg :poster="posterBg" />
+    <Header />
     <MoviesList :list="moviesList" @changePoster="onChangePoster" />
     <MoviesPagination
       :current-page="currentPage"
@@ -14,18 +16,22 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
+import Header from '@/components/Header';
 import MoviesList from '@/components/MoviesList';
 import PosterBg from '@/components/PosterBg';
 import MoviesPagination from '@/components/MoviesPagination';
 import Loader from '@/components/Loader';
+import Notification from '@/components/Notification';
 
 export default {
   name: 'App',
   components: {
+    Header,
     MoviesList,
     PosterBg,
     MoviesPagination,
-    Loader
+    Loader,
+    Notification
   },
   data: () => ({
     posterBg: ''
@@ -63,6 +69,9 @@ export default {
 <style>
 #app {
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

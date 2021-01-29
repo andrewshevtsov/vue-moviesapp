@@ -1,5 +1,5 @@
 <template>
-  <div class="movies-pagination d-flex justify-content-center">
+  <div class="movies-pagination d-flex justify-content-center mt-3">
     <BPagination
       v-model="currentPageModel"
       :per-page="perPage"
@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .movies-pagination {
-  margin-top: 30px;
+  margin-top: auto;
 }
 
 .movies-pagination >>> .pagination .page-item .page-link {

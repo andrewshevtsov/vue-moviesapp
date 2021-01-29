@@ -30,6 +30,8 @@
     "vue-template-compiler": "^2.6.11"
   },
   "prettier": {
-    "singleQuote": true
+    "singleQuote": true,
+    "semi": true,
+    "trailingComma": "none"
   }
 }
